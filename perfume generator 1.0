@@ -1,0 +1,26 @@
+# This program will select a random top, middle, and base note for perfumery creation.
+import random
+
+print('''The rules for perfumery are simple and finite. 
+Any Cosmo girl would know! 
+
+"top note + middle note + base note"
+
+This program will generate a random note 
+of each type for inspiration
+and experimentation purposes!
+''')
+topNotes = ["lemongrass", "pine", "palmarosa", "citronella", "red mandarin", "bergamot", "elemi", "rosemary", "eucalyptus", "peppermint", "fennel", "juniper berry", "catnip", "ravensara", "basil", "camphor", "black pepper", "blueberry", "cassis", "apple", "pomegranate", "blackberry", "black cherry", "cantaloupe", "coconut", "cucumber", "fig", "guava", "kiwi", "lemon", "lime", "orange", "grapefruit", "honeydew", "banana", "apricot", "mango", "melon", "pear", "pineapple", "raspberry", "strawberry", "bamboo", "fresh cut grass", "green tea", "black tea", "white tea", "champange", "mountain air", "baby powder", "peach", "cranberry"]
+
+middleNotes = ["rose", "ylang-ylang", "violet", "cassia", "geranium", "blue lotus", "lavender", "clove", "champaka", "nutmeg", "brown sugar", "new car", "mulberry", "daffodil", "sugar", "papaya", "watermelon", "night air", "rain", "mistletoe", "carnation", "cherry blossom", "forget-me-not", "poppy", "hibiscus", "freesia", "frangipani", "lily of the valley", "wisteria", "heather", "lotus", "primrose", "neroli", "hawaiian ginger", "orchid", "passion flower", "peony", "plumeria", "sweet pea", "sea shore", "salty sea", "ocean breeze", "hyacinth", "daisy", "water lily", "tuberose", "linden", "hydrangea", "sassafras", "lilac", "honeysuckle", "jasmine", "azalea", "magnolia", "gardenia"]
+
+baseNotes = ["bay rum", "teakwood", "evergreen forest", "redwood forest", "fresh cut wood", "gunpowder", "aloe vera", "coffee", "dragon blood", "old books", "oakmoss", "leather", "campfire", "amber", "honey", "moss", "vanilla", "sand", "dirt", "cedarwood", "sandalwood", "vetiver", "arborvitae", "cypress", "copaiba", "mastic", "myrrh", "frankincense", "orris", "amyris", "musk", "cocoa-vanilla", "sage", "tobacco"]
+
+topNote_choice = random.choice(topNotes)
+print("The selected top note is",topNote_choice)
+
+middleNote_choice = random.choice(middleNotes)
+print("The selected middle note is",middleNote_choice)
+
+baseNote_choice = random.choice(baseNotes)
+print("The selected base note is",baseNote_choice)
