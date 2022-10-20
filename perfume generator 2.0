@@ -1,0 +1,67 @@
+# This program will generate a selection of top, middle, and base notes for a perfume formula and offer a letter and length for the name of the perfume.
+import random
+
+
+print('''The rules for perfumery are simple and finite. 
+Any Cosmo girl would know! 
+
+"top note(s) + middle note(s) + base note(s)"
+
+This program will generate unique formulas for inspiration
+and experimentation purposes!
+''')
+
+topNotes = ["lemongrass", "pine", "palmarosa", "citronella", "red mandarin", "bergamot", "elemi", "rosemary", "eucalyptus", "peppermint", "fennel", "juniper berry", "catnip", "ravensara", "basil", "camphor", "black pepper", "blueberry", "cassis", "apple", "pomegranate", "blackberry", "black cherry", "cantaloupe", "coconut", "cucumber", "fig", "guava", "kiwi", "lemon", "lime", "orange", "grapefruit", "honeydew", "banana", "apricot", "mango", "melon", "pear", "pineapple", "raspberry", "strawberry", "bamboo", "fresh cut grass", "green tea", "black tea", "white tea", "champange", "mountain air", "baby powder", "peach", "cranberry"]
+
+middleNotes = ["rose", "ylang-ylang", "violet", "cassia", "geranium", "blue lotus", "lavender", "clove", "champaka", "nutmeg", "brown sugar", "new car", "mulberry", "daffodil", "sugar", "papaya", "watermelon", "night air", "rain", "mistletoe", "carnation", "cherry blossom", "forget-me-not", "poppy", "hibiscus", "freesia", "frangipani", "lily of the valley", "wisteria", "heather", "lotus", "primrose", "neroli", "hawaiian ginger", "orchid", "passion flower", "peony", "plumeria", "sweet pea", "sea shore", "salty sea", "ocean breeze", "hyacinth", "daisy", "water lily", "tuberose", "linden", "hydrangea", "sassafras", "lilac", "honeysuckle", "jasmine", "azalea", "magnolia", "gardenia"]
+
+baseNotes = ["bay rum", "teakwood", "evergreen forest", "redwood forest", "fresh cut wood", "gunpowder", "aloe vera", "coffee", "dragon blood", "old books", "oakmoss", "leather", "campfire", "amber", "honey", "moss", "vanilla", "sand", "dirt", "cedarwood", "sandalwood", "vetiver", "arborvitae", "cypress", "copaiba", "mastic", "myrrh", "frankincense", "orris", "amyris", "musk", "cocoa-vanilla", "sage", "tobacco"]
+
+topNote_choice = random.choice(topNotes)
+
+middleNote_choice = random.choice(middleNotes)
+
+baseNote_choice = random.choice(baseNotes)
+
+topNote_sample = random.sample(topNotes, 2)
+
+middleNote_sample = random.sample(middleNotes, 2)
+middleNote_sample2 = random.sample(middleNotes, 3)
+
+baseNote_sample = random.sample(baseNotes, 2)
+
+topNote_amt = int(input("Please select one (1) or two (2) top notes: "))
+if topNote_amt == 1:
+  print(topNote_choice)
+elif topNote_amt == 2:
+  print (topNote_sample)
+else:
+  print("Sorry, please select only one (1) or two (2) top notes.")
+
+middleNote_amt = int(input("Please select one (1), two (2), or three (3) middle notes: "))
+if middleNote_amt == 1:
+  print(middleNote_choice)
+elif middleNote_amt == 2:
+  print(middleNote_sample)
+elif middleNote_amt == 3:
+  print(middleNote_sample2)
+else:
+  print("Sorry, please select only one (1), two (2), or three (3) middle notes.")
+
+baseNote_amt = int(input("Please select one (1) or two (2) base notes: "))
+if baseNote_amt == 1:
+  print(baseNote_choice)
+elif baseNote_amt == 2:
+  print (baseNote_sample)
+else:
+  print("Sorry, please select only one (1) or two (2) base notes.")
+
+alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+
+perfume_letter = random.choice(alphabet)
+
+numbers = [4, 5, 6, 7, 8, 9, 10, 11]
+
+letter_amt = random.choice(numbers)
+
+print("This perfume should have a name that starts with the letter", perfume_letter ,"and has", letter_amt , "letters.")
